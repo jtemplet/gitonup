@@ -1,0 +1,26 @@
+{
+  "name": "gitonup",
+  "version": "0.0.0",
+  "description": "Intended to run with create-module in offline mode, creates a git remote repo, pushes the local repo to the remote repo, adds the new remote repo to the package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jtemplet/gitonup.git"
+  },
+  "keywords": [
+    "git",
+    "node",
+    "github",
+    "tools",
+    "tooling"
+  ],
+  "author": "jtemple77@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jtemplet/gitonup/issues"
+  },
+  "homepage": "https://github.com/jtemplet/gitonup"
+}
