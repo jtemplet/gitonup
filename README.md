@@ -3,6 +3,10 @@
 
 Helper tool, intended to be ran after create-module was ran in offline mode
 
+## Install
+```sh
+npm install gitonup -g
+```
 
 ## Usage
 ```
