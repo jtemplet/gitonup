@@ -1,6 +1,8 @@
 # gitonup
 [![NPM](https://nodei.co/npm/gitonup.png)](https://nodei.co/npm/gitonup/)
 
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 Helper tool, intended to be ran after create-module was ran in offline mode
 
 ## Install
