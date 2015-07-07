@@ -2,7 +2,7 @@ var request = require('request')
 var series = require('run-series')
 var exec = require('child_process').exec
 var path = require('path')
-var base = 'https://api.github.com'
+var githubBase = 'https://api.github.com'
 
 module.exports = gitonup
 
@@ -31,8 +31,8 @@ function gitonup (token, service, cb) {
 
   function createGitHubrepo (cb) {
     console.log('Creating GitHub repo..')
-    request.post(base + '/user/repos', {json: input, headers: headers}, function (err, res, repository) {
-      if (err || repository.errors) return cb(err || repository.errors)
+    request.post(githubBase + '/user/repos', {json: input, headers: headers}, function (err, res, repository) {
+      if (err || repository.errors) return cb(err || repository.errors.pop())
       repo = repository
       console.log('Created repo', repo.full_name)
       cb(null, repo)
@@ -49,7 +49,7 @@ function gitonup (token, service, cb) {
 
   function changeDescription (cb) {
     input.description = require(path.join(dir, 'package.json')).description
-    var repoUrl = [base, 'repos', repo.full_name].join('/')
+    var repoUrl = [githubBase, 'repos', repo.full_name].join('/')
     request.patch(repoUrl, {json: input, headers: headers}, cb)
   }
 
