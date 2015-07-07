@@ -1,6 +1,6 @@
 {
   "name": "gitonup",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Intended to run with create-module in offline mode, creates a git remote repo, pushes the local repo to the remote repo, adds the new remote repo to the package.json",
   "main": "index.js",
   "scripts": {
